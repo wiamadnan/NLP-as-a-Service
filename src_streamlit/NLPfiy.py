@@ -5,7 +5,7 @@ import json
 
 
 class MakeCalls:
-    def __init__(self, url: str = "http://localhost:8080/") -> None:
+    def __init__(self, url: str = "http://localhost:8051/") -> None:
         """
         Constructor for the MakeCalls class. This class is used to perform API calls to the backend service.
         :param url: URL of the server. Default value is set to local host: http://localhost:8080
@@ -60,7 +60,7 @@ class Display:
         self.service = {
             "Project Insight": "about",
             "News Classification": "classification",
-            "Named Entity Recognition": "ner",
+            # "Named Entity Recognition": "ner",
             "Sentiment Analysis": "sentiment",
             "Summarization": "summary",
         }

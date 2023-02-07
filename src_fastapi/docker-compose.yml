@@ -25,13 +25,13 @@ services:
     ports:
       - 8003:8000
 
-  ner:
-    build: ./ner
-    command: uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
-    volumes:
-      - ./ner/:/app/
-    ports:
-      - 8004:8000
+  # ner:
+  #   build: ./ner
+  #   command: uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
+  #   volumes:
+  #     - ./ner/:/app/
+  #   ports:
+  #     - 8004:8000
 
   nginx:
     image: nginx:latest
@@ -43,4 +43,4 @@ services:
       - classification
       - sentiment
       - summary
-      - ner
+      # - ner
